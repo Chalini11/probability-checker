@@ -25,4 +25,17 @@ public class Probability
 
 
     }
+
+    public Object multiply(Probability eventTwo)
+    {
+        double value = eventTwo.probability * probability;
+        return new Probability(value);
+    }
+
+    public int isCertain(Probability anotherEvent)
+    {
+        if(probability == 1 && anotherEvent.probability==1)
+            return 1;
+        return 0;
+    }
 }
